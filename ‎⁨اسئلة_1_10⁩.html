@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>اختبار تفاعلي - س1 إلى س10</title>
+<style>
+body { font-family: Tahoma; direction: rtl; margin: 20px; }
+.question { border: 1px solid #aaa; padding: 15px; margin-bottom: 20px; border-radius: 6px; }
+.result { font-weight: bold; margin-top: 10px; }
+.correct { color: green; display:none; }
+.wrong { color: red; display:none; }
+</style>
+<script>
+function checkAnswer(qNum, correctAnswer) {
+  var options = document.getElementsByName("q"+qNum);
+  var selected = "";
+  for(var i=0; i<options.length; i++){
+    if(options[i].checked){
+      selected = options[i].value;
+    }
+  }
+  if(selected === correctAnswer){
+    document.getElementById("correct"+qNum).style.display = "block";
+    document.getElementById("wrong"+qNum).style.display = "none";
+  } else if(selected !== ""){
+    document.getElementById("wrong"+qNum).style.display = "block";
+    document.getElementById("correct"+qNum).style.display = "none";
+  } else {
+    alert("اختر إجابة أولاً");
+  }
+}
+</script>
+</head>
+<body>
+
+<h2>📘 اختبار تفاعلي (الأسئلة من س1 إلى س10)</h2>
+<div class="question">
+  <p><b>س1:</b> كان النبي ﷺ شعر لحيته:</p>
+  <label><input type="radio" name="q1" value="أ"> أ- خفيف</label><br>
+  <label><input type="radio" name="q1" value="ب"> ب- كثيف</label><br>
+  <label><input type="radio" name="q1" value="ج"> ج- قليل</label><br>
+  <label><input type="radio" name="q1" value="د"> د- قصير</label><br>
+  <button onclick="checkAnswer(1, 'ب')">تحقق</button>
+  <p id="correct1" class="result correct">✅ إجابة صحيحة</p>
+  <p id="wrong1" class="result wrong">❌ إجابة خاطئة</p>
+</div>
+
+<div class="question">
+  <p><b>س2:</b> ضرب النبي ﷺ المثل في معاهدة حفظ القرآن بـ:</p>
+  <label><input type="radio" name="q2" value="أ"> أ- التمرة</label><br>
+  <label><input type="radio" name="q2" value="ب"> ب- الأترجة</label><br>
+  <label><input type="radio" name="q2" value="ج"> ج- الريحانة</label><br>
+  <label><input type="radio" name="q2" value="د"> د- الإبل المعقلة</label><br>
+  <button onclick="checkAnswer(2, 'د')">تحقق</button>
+  <p id="correct2" class="result correct">✅ إجابة صحيحة</p>
+  <p id="wrong2" class="result wrong">❌ إجابة خاطئة</p>
+</div>
+
+<div class="question">
+  <p><b>س3:</b> قال رسول الله ﷺ: "إن مما أدرك الناس من كلام النبوة الأولى...":</p>
+  <label><input type="radio" name="q3" value="أ"> أ- إذا أراد الله بعبد خيراً استعمله</label><br>
+  <label><input type="radio" name="q3" value="ب"> ب- إذا لم تستح فاصنع ما شئت</label><br>
+  <label><input type="radio" name="q3" value="ج"> ج- إذا أراد الله بعبد خيراً زهده في الدنيا</label><br>
+  <label><input type="radio" name="q3" value="د"> د- إذا أراد الله بعبد خيراً فقهه في الدين</label><br>
+  <button onclick="checkAnswer(3, 'ب')">تحقق</button>
+  <p id="correct3" class="result correct">✅ إجابة صحيحة</p>
+  <p id="wrong3" class="result wrong">❌ إجابة خاطئة</p>
+</div>
+
+<div class="question">
+  <p><b>س4:</b> يعرف علم مصطلح الحديث بأنه: علم بأصول يعرف بها ... من حيث ... والتكملات محل الفراغ هي على الترتيب:</p>
+  <label><input type="radio" name="q4" value="أ"> أ- أرجحة الحديث - القبول والرد</label><br>
+  <label><input type="radio" name="q4" value="ب"> ب- أحوال السند والمتن - القبول والرد</label><br>
+  <label><input type="radio" name="q4" value="ج"> ج- أحوال السند والمتن - الصحة والضعف</label><br>
+  <label><input type="radio" name="q4" value="د"> د- أحوال السند والمتن - الوضع والتضعيف</label><br>
+  <button onclick="checkAnswer(4, 'ب')">تحقق</button>
+  <p id="correct4" class="result correct">✅ إجابة صحيحة</p>
+  <p id="wrong4" class="result wrong">❌ إجابة خاطئة</p>
+</div>
+
+<div class="question">
+  <p><b>س5:</b> علم الإسناد يراد به:</p>
+  <label><input type="radio" name="q5" value="أ"> أ- قلة عدد رجال الإسناد بالنسبة لإسناد آخر</label><br>
+  <label><input type="radio" name="q5" value="ب"> ب- كثرة عدد رجال الإسناد بالنسبة لإسناد آخر</label><br>
+  <label><input type="radio" name="q5" value="ج"> ج- نقل الرواة من أهل الضبط</label><br>
+  <label><input type="radio" name="q5" value="د"> د- ورود الحديث من طرق متعددة</label><br>
+  <button onclick="checkAnswer(5, 'أ')">تحقق</button>
+  <p id="correct5" class="result correct">✅ إجابة صحيحة</p>
+  <p id="wrong5" class="result wrong">❌ إجابة خاطئة</p>
+</div>
+
+<div class="question">
+  <p><b>س6:</b> من صفات الصحيح لذاته أن يكون:</p>
+  <label><input type="radio" name="q6" value="أ"> أ- متصل السند، رواته عدول، ضابطون</label><br>
+  <label><input type="radio" name="q6" value="ب"> ب- مقطوع السند</label><br>
+  <label><input type="radio" name="q6" value="ج"> ج- مرسل</label><br>
+  <label><input type="radio" name="q6" value="د"> د- منقطع</label><br>
+  <button onclick="checkAnswer(6, 'أ')">تحقق</button>
+  <p id="correct6" class="result correct">✅ إجابة صحيحة</p>
+  <p id="wrong6" class="result wrong">❌ إجابة خاطئة</p>
+</div>
+
+<div class="question">
+  <p><b>س7:</b> يطلق على الحديث الذي فقد شرطاً من شروط الحديث الصحيح:</p>
+  <label><input type="radio" name="q7" value="أ"> أ- الصحيح</label><br>
+  <label><input type="radio" name="q7" value="ب"> ب- الموضوع</label><br>
+  <label><input type="radio" name="q7" value="ج"> ج- الحسن</label><br>
+  <label><input type="radio" name="q7" value="د"> د- المتواتر</label><br>
+  <button onclick="checkAnswer(7, 'ج')">تحقق</button>
+  <p id="correct7" class="result correct">✅ إجابة صحيحة</p>
+  <p id="wrong7" class="result wrong">❌ إجابة خاطئة</p>
+</div>
+
+<div class="question">
+  <p><b>س8:</b> يطلق على الحديث الذي يرويه عدد كثير تحيل العادة تواطؤهم على الكذب:</p>
+  <label><input type="radio" name="q8" value="أ"> أ- الآحاد</label><br>
+  <label><input type="radio" name="q8" value="ب"> ب- المتواتر</label><br>
+  <label><input type="radio" name="q8" value="ج"> ج- الموضوع</label><br>
+  <label><input type="radio" name="q8" value="د"> د- الغريب</label><br>
+  <button onclick="checkAnswer(8, 'ب')">تحقق</button>
+  <p id="correct8" class="result correct">✅ إجابة صحيحة</p>
+  <p id="wrong8" class="result wrong">❌ إجابة خاطئة</p>
+</div>
+
+<div class="question">
+  <p><b>س9:</b> يطلق على الحديث الذي لم يبلغ حد التواتر:</p>
+  <label><input type="radio" name="q9" value="أ"> أ- الموضوع</label><br>
+  <label><input type="radio" name="q9" value="ب"> ب- المتروك</label><br>
+  <label><input type="radio" name="q9" value="ج"> ج- الآحاد</label><br>
+  <label><input type="radio" name="q9" value="د"> د- الغريب</label><br>
+  <button onclick="checkAnswer(9, 'ج')">تحقق</button>
+  <p id="correct9" class="result correct">✅ إجابة صحيحة</p>
+  <p id="wrong9" class="result wrong">❌ إجابة خاطئة</p>
+</div>
+
+<div class="question">
+  <p><b>س10:</b> يطلق على الحديث الذي يرويه راو واحد فقط:</p>
+  <label><input type="radio" name="q10" value="أ"> أ- الغريب</label><br>
+  <label><input type="radio" name="q10" value="ب"> ب- العزيز</label><br>
+  <label><input type="radio" name="q10" value="ج"> ج- المشهور</label><br>
+  <label><input type="radio" name="q10" value="د"> د- المتواتر</label><br>
+  <button onclick="checkAnswer(10, 'أ')">تحقق</button>
+  <p id="correct10" class="result correct">✅ إجابة صحيحة</p>
+  <p id="wrong10" class="result wrong">❌ إجابة خاطئة</p>
+</div>
+
+</body></html>
